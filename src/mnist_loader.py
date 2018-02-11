@@ -16,6 +16,7 @@ import gzip
 # Third-party libraries
 import numpy as np
 
+
 def load_data():
     """Return the MNIST data as a tuple containing the training data,
     the validation data, and the test data.
@@ -39,7 +40,7 @@ def load_data():
     That's done in the wrapper function ``load_data_wrapper()``, see
     below.
     """
-    f = gzip.open('../data/mnist.pkl.gz', 'rb')
+    f = gzip.open('/home/mirikwa/Projects/Machine-learning/neural-networks-and-deep-learning/data', 'rb')
     training_data, validation_data, test_data = cPickle.load(f)
     f.close()
     return (training_data, validation_data, test_data)
